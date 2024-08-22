@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #heartImageContainer,
+        #newImageContainer {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #heartImage,
+        #newImage {
+            width: 400px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #message {
+            font-size: 16px;
+            color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        #initialButton {
+            font-size: 16px;
+            padding: 10px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        #initialButton:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            #heartImage,
+            #newImage {
+                width: 200px;
+            }
+
+            #message,
+            #initialButton {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="initialButton" onclick="showHeart()">aperte para ter o acesso ao meu coração</button>
+    
+    <div id="heartImageContainer">
+        <img id="heartImage" src="https://png.pngtree.com/png-vector/20230529/ourmid/pngtree-pink-heart-isolated-on-white-vector-png-image_7114241.png" alt="Coração" onclick="showNextMessage()">
+        <p id="message"></p>
+    </div>
+
+    <div id="newImageContainer">
+        <img id="newImage" src="https://i.pinimg.com/originals/d2/b6/6a/d2b66ab5ed6d62f49965e7c27306f3b7.jpg" alt="Nova Imagem" onclick="showNextMessage()">
+    </div>
+
+    <script>
+        var messages = [
+            "humm... quase lá!",
+            "tá meio difícil hein?",
+            "mais força, campeão... coração da princesa consegue ser bem difícil",
+            "só mais uma vez. o segredo está prestes a ser revelado..."
+        ];
+
+        var currentIndex = 0;
+
+        function showHeart() {
+            var initialButton = document.getElementById('initialButton');
+            var heartImageContainer = document.getElementById('heartImageContainer');
+            var newImageContainer = document.getElementById('newImageContainer');
+
+            initialButton.style.display = 'none';
+            heartImageContainer.style.display = 'block';
+            newImageContainer.style.display = 'none';
+
+            showNextMessage();
+        }
+
+        function showNextMessage() {
+            var messageElement = document.getElementById('message');
+            var heartImageContainer = document.getElementById('heartImageContainer');
+            var newImageContainer = document.getElementById('newImageContainer');
+            var heartImage = document.getElementById('heartImage');
+            var newImage = document.getElementById('newImage');
+
+            if (currentIndex < messages.length) {
+                messageElement.innerText = messages[currentIndex];
+                currentIndex++;
+            } else {
+                newImage.src = "https://i.pinimg.com/originals/d2/b6/6a/d2b66ab5ed6d62f49965e7c27306f3b7.jpg";
+                newImage.alt = "Nova Imagem";
+
+                heartImageContainer.style.display = 'none';
+                newImageContainer.style.display = 'block';
+
+                messageElement.innerText = "";
+
+                newImage.style.width = "400px";
+                newImage.style.height = "auto";
+
+                newImage.onclick = null;
+            }
+        }
+    </script>
+</body>
+</html>
