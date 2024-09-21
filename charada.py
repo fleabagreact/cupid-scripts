@@ -3,7 +3,7 @@ from tkinter import messagebox
 import random
 
 def clicou_sim():
-    messagebox.showinfo("Aviso", "Tamo junto, galado!")
+    messagebox.showinfo("Aviso", "Insira aqui uma piada interna de vocês 2")
 
 def mover_nao():
     x = random.randint(0, largura_janela - largura_nao)
@@ -22,7 +22,7 @@ def definir_cores_rosa():
     botao_nao.configure(bg="#C71585", activebackground="#C71585", activeforeground="white")
 
 janela = tk.Tk()
-janela.title("Título Modificado")
+janela.title("Pergunta com apenas uma resposta (sim)")
 
 largura_janela = 400
 altura_janela = 400
@@ -30,7 +30,7 @@ altura_janela = 400
 janela.geometry(f"{largura_janela}x{altura_janela}")
 cor_fundo_padrao = janela.cget("bg")
 
-mensagem_texto = "Você veria o musical de Mean Girls com essa aluna de informática? Você veria?"
+mensagem_texto = "Insira aqui alguma pergunta boba pra sua pessoa"
 
 fonte_negrito = ("Calibri", 12, "bold")
 
