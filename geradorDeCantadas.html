@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name = "autor" content="https://github.com/fleabagreact">
+    <title>Cantadas de programação</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 50px;
+      }
+      #cantada {
+        font-size: 24px;
+        margin-top: 20px;
+      }
+      #atualizar {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Cantadas de programação</h1>
+    <p id="cantada"></p>
+    <button id="atualizar" onclick="gerarCantada()">Atualizar cantada</button>
+
+    <script>
+      function gerarCantada() {
+        const cantadas = [
+          "Seu código é tão limpo que nem o Linus Torvalds seria capaz de encontrar um bug nele.",
+          "Você é a solução para meu erro 404.",
+          "Seu sorriso é mais brilhante do que meu monitor em um dia ensolarado.",
+          "Você é como um loop infinito, eu não quero que acabe.",
+          "Se eu pudesse ser qualquer linguagem de programação, seria a sua preferida.",
+          "Você não é um bug, você é uma feature não documentada.",
+          "Eu poderia criar um algoritmo para descrever sua beleza, mas nem mesmo a inteligência artificial seria capaz de capturar sua perfeição.",
+          "Você é a página inicial do meu navegador.",
+          "Se eu fosse um arquivo, você seria o meu nome.",
+          "Você é a chave primária da minha tabela.",
+          "Você é tão especial que eu nem preciso utilizar um framework para construir um relacionamento com você.",
+          "Seu código-fonte é como uma obra de arte, eu não consigo tirar meus olhos dele.",
+          "Você é um loop infinito, porque não consigo parar de pensar em você.",
+          "Seu código-fonte é tão limpo que eu poderia comer meu jantar em cima dele.",
+          "Você é o CSS do meu HTML, eu não consigo fazer nada sem você.",
+          "Se você fosse um software, eu instalaria você em todos os meus dispositivos.",
+          "Eu queria ser seu servidor para que você pudesse enviar solicitações para mim o dia todo.",
+          "Você é a variável global do meu coração.",
+          "Quando te vi, meu banco de dados ficou sobrecarregado com todos os seus dados.",
+          "Você é o HTML para o meu navegador, eu não posso viver sem você.",
+          "Você é a API do meu coração, eu não posso fazer nada sem você.",
+          "Você é tão quente que causou um overflow em meu coração.",
+          "Você é o Wi-Fi para o meu laptop, sem você eu estou perdido.",
+          "Seu nome é Google? Porque você tem tudo que eu estou procurando.",
+          "Se você fosse um erro de sintaxe, eu nunca te deixaria passar.",
+          "Você é o CSS do meu HTML, sem você eu não tenho estilo.",
+          "Se você fosse um código, eu te executaria infinitas vezes.",
+          "Você é a chave primária da minha tabela, sem você nada funciona.",
+          "Você é tão inteligente que devia ser variável global, assim todos teriam acesso a você.",
+          "Você é a função que faltava na minha classe, retorna meu coração que eu te dou uma resposta.",
+          "Se você fosse um erro de sintaxe, eu nunca iria te deixar escapar!",
+          "Meu amor por você é como um loop infinito, nunca acaba!",
+          "Se eu fosse um teclado, você seria o meu enter!",
+          "Você é a exceção na minha rotina!",
+          "Eu só queria saber a senha do seu coração!",
+          "Meu coração é como um código mal escrito, só funciona com você!",
+          "Se o amor é um programa, você é o meu main!",
+          "Com você, eu nunca preciso do comando undo!",
+          "Você é o meu método favorito!",
+          "Meu coração é como um código aberto, você pode usá-lo sempre que quiser!",
+          "Você é HTTP? Porque quando estou sem você fico ://"
+        ];
+
+        const index = Math.floor(Math.random() * cantadas.length);
+        const cantada = cantadas[index];
+        document.getElementById("cantada").innerHTML = cantada;
+      }
+    </script>
+  </body>
+</html>
